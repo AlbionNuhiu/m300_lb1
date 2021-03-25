@@ -11,21 +11,6 @@ Diese VM ist nur Normal gesichert, sie hat keine speziele Firewall oder auch kei
 
 
 # Setup
-<TextBox name="SampleTextBox" Text="
-+---------------------------------------------------------------+
-! Notebook - Schulnetz 10.x.x.x und Privates Netz 192.168.55.1  !                 
-! Port: 8080 (192.158.55.101:80)                                !	
-!                                                               !	
-!    +--------------------+          +---------------------+    !
-!    ! CheckMK Server     !          ! CheckMK Client      !    ! 
-!    ! Host: checkmk      !          ! Host: client        !    !
-!    ! IP: 192.168.55.100 ! <------> ! IP: 192.168.55.101  !    !
-!    ! Port: 80           !          ! Port: -             !    !
-!    ! Nat: 8080          !          ! Nat: -              !    !
-!    +--------------------+          +---------------------+    !
-!                                                               !	
-+---------------------------------------------------------------+ "/>
-
 Das Setup ist ganz einfach:
 
 1. In das geklonte Verzeichnis wechseln.
@@ -35,3 +20,5 @@ Das Setup ist ganz einfach:
 5. CheckMk Starten.
 6. Mit dem User cmkadmin und dem Passwort Admin1234 anmelden.
 Fertig!
+
+[Setup.txt](https://github.com/AlbionNuhiu/m300_lb/files/6208214/Setup.txt)
