@@ -1,9 +1,7 @@
 # CheckMk Vagrant 
 #
 #
-# CheckMk Vagrant 
-#
-#
+
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
@@ -14,5 +12,20 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		checkmk.vm.network "forwarded_port", guest:80, host:8080, auto_correct: true
 		checkmk.vm.provider "virtualbox" do |vb|
 	  vb.memory = "4096"  
-	end  
-	
+	end
+	checkmk.vm.provision "shell", inline: <<-SHELL
+		sudo apt-get update
+		sudo wget https://mathias-kettner.de/support/Check_MK-pubkey.gpg
+		sudo wget https://download.checkmk.com/checkmk/2.0.0p1/check-mk-raw-2.0.0p1_0.xenial_amd64.deb
+		sudo apt-key add Check_MK-pubkey.gpg
+		sudo apt-get -y install gdebi-core
+		sudo gdebi -n check-mk-raw-2.0.0p1_0.xenial_amd64.deb
+		sudo omd create TBZSide
+		sudo omd start TBZSide
+		wget http://192.168.55.100/TBZSide/check_mk/agents/check-mk-agent_2.0.0p1-1_all.deb
+		sudo gdebi -n check-mk-agent_2.0.0p1-1_all.deb
+		cd /omd/sites/TBZSide/etc
+		sudo rm htpasswd
+		sudo su
+		htpasswd -nb cmkadmin Admin1234 > htpasswd
+		exit
