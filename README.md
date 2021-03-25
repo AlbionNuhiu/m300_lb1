@@ -11,7 +11,7 @@ Diese VM ist nur Normal gesichert, sie hat keine speziele Firewall oder auch kei
 
 
 # Setup
-<TextBox name="
+<TextBox name="SampleTextBox" Text="
 +---------------------------------------------------------------+
 ! Notebook - Schulnetz 10.x.x.x und Privates Netz 192.168.55.1  !                 
 ! Port: 8080 (192.158.55.101:80)                                !	
@@ -24,7 +24,7 @@ Diese VM ist nur Normal gesichert, sie hat keine speziele Firewall oder auch kei
 !    ! Nat: 8080          !          ! Nat: -              !    !
 !    +--------------------+          +---------------------+    !
 !                                                               !	
-+---------------------------------------------------------------+ " Text="Sample Text"/>
++---------------------------------------------------------------+ "/>
 
 Das Setup ist ganz einfach:
 
