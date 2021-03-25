@@ -91,4 +91,7 @@ ____
 ![Login](https://user-images.githubusercontent.com/80855358/112553404-be417780-8dc4-11eb-89ee-b22912cc174c.PNG)
 ____
 Danach geht man auf das Main-Dashboard.
-
+___
+![MainDashboard](https://user-images.githubusercontent.com/80855358/112553713-4d4e8f80-8dc5-11eb-98a4-af5ac538f9bc.PNG)
+___
+Hier geht man auf "ADD" und addet einen neuen Host den an kontrollieren kann.
