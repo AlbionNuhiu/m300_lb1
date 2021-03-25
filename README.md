@@ -86,7 +86,9 @@ ______
 
 # Client in CheckMK aufnehmen
 Sobald  die Installation abgeschlossen ist kann man CheckMK per http://localhost:8080/TBZSide/check_mk/login.py öffnen.
-Danach meldet man sich mit cmkadmin und Admin1234 an. ![Login](https://user-images.githubusercontent.com/80855358/112553404-be417780-8dc4-11eb-89ee-b22912cc174c.PNG)
-
+Danach meldet man sich mit cmkadmin und Admin1234 an. 
+____
+![Login](https://user-images.githubusercontent.com/80855358/112553404-be417780-8dc4-11eb-89ee-b22912cc174c.PNG)
+____
 Danach geht man auf das Main-Dashboard.
 
