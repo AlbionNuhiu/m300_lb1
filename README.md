@@ -1,4 +1,4 @@
 # m300_lb
-# <p class="h1">CHECKMK Vagrant</p>
+# CHECKMK Vagrant
 # 
-# <p class="h5">y Albion Nuhiu ST18E</p> B
+# By Albion Nuhiu ST18E
