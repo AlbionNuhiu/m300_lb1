@@ -29,3 +29,20 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		sudo su
 		htpasswd -nb cmkadmin Admin1234 > htpasswd
 		exit
+SHELL
+	end
+	config.vm.define "client" do |client|
+    client.vm.box = "ubuntu/xenial64"
+    client.vm.hostname = "client"
+    client.vm.network "private_network", ip:"192.168.55.101" 
+	client.vm.provider "virtualbox" do |vb|
+	  vb.memory = "4096"  
+	end 
+	client.vm.provision "shell", inline: <<-SHELL
+	sudo apt-get -y install gdebi-core
+	sudo apt-get -y install xinetd
+	wget http://192.168.55.100/TBZSide/check_mk/agents/check-mk-agent_2.0.0p1-1_all.deb
+	sudo gdebi -n check-mk-agent_2.0.0p1-1_all.deb
+SHELL
+	end  
+ end
