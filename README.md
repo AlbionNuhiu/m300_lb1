@@ -10,7 +10,7 @@ Die Idee für dieses Projekt habe ich gefunden weil bei uns in der Firma auch Ch
 Diese VM ist nur Normal gesichert, sie hat keine speziele Firewall oder auch kein Reverse Proxy. Der Service Selbst ist durch Benutzername und Passwort gesichert. Es können einfach weitere Accounts über das Webinterface erstellt werden. Thoretisch kann man die VM natürlich mit den vorhin erwänten Metoden sichern, aber leider hat mir für dies die Zeit gefehlt.
 
 # Setup
-+---------------------------------------------------------------+
+*+---------------------------------------------------------------+
 ! Notebook - Schulnetz 10.x.x.x und Privates Netz 192.168.55.1  !                 
 ! Port: 8080 (192.158.55.101:80)                                !	
 !                                                               !	
@@ -22,7 +22,7 @@ Diese VM ist nur Normal gesichert, sie hat keine speziele Firewall oder auch kei
 !    ! Nat: 8080          !          ! Nat: -              !    !
 !    +--------------------+          +---------------------+    !
 !                                                               !	
-+---------------------------------------------------------------+
++---------------------------------------------------------------+ *
 Das Setup ist ganz einfach:
 
 1. In das geklonte Verzeichnis wechseln.
