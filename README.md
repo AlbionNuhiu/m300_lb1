@@ -65,3 +65,20 @@ sudo su in den Root User wechseln.
 htpasswd -nb cmkadmin Admin1234 > htpasswd Neue htpasswd erstellen mit dem User cmkadmin und dem Passwort Admin1234.
 
 exit Beenden der Konsole.
+# VM Config 2
+[VMConfig2.txt](https://github.com/AlbionNuhiu/m300_lb/files/6208249/VMConfig2.txt)
+______
+In diesem Teil wird die zweite VM definiert, in diesem Fall der Client. Die Box für diesen Service ist die ubuntu/xenial64 Box. Der Hostname wird auf Client gesetzt. Die VM bekommt nur einen Adapter der von dem internen Netzwerk. Das interne Netzwerk ist für die Kommunikation zwischen Server und dem Client zu benutzen. Der Client hat die interne IP 192.168.55.101. Der Vm wird 512 MB Ram zugewiesen, was für ein kleines Linux reicht.
+
+# Vm Befehl 2
+[VMBefehl2.txt](https://github.com/AlbionNuhiu/m300_lb/files/6208251/VMBefehl2.txt)
+______
+sudo apt-get -y install gdebi-core installiert gdebi welches für die Installation benötigt wird.
+
+sudo apt-get -y install xinetd instaliert xinetd welches für die Installation benötigt wird.
+
+wget http://192.168.55.100/TBZSide/check_mk/agents/check-mk-agent_1.4.0p38-1_all.deb Mit diesem Befel wird der CheckMK Agent auf dem Client heruntergeladen.
+
+sudo gdebi -n check-mk-agent_1.4.0p38-1_all.deb Instaliert den herunter geladen Agent.
+
+Somit ist der Client bereit in CheckMK aufgenommen zu werden.
