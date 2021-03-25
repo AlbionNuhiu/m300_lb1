@@ -98,7 +98,7 @@ Bei ServicesOfHostClient, sieht man alle eingetragenen Hosts und Services.
 ___
 ![ServicesOfHostClient](https://user-images.githubusercontent.com/80855358/112553902-a4ecfb00-8dc5-11eb-95b2-a7157a0a8f63.PNG)
 ___
-#Vagrant Destroy
+# Vagrant Destroy
 Mit Vagrant Destroy, löscht man alles was dieses Vagrant-File zuvor kreiert hat, also auch die 2 VM's in Virtualbox.
 ___
 ![Vagrant_Destroy](https://user-images.githubusercontent.com/80855358/112554056-e8e00000-8dc5-11eb-8159-14b245a9fc52.PNG)
