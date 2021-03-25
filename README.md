@@ -82,3 +82,9 @@ wget http://192.168.55.100/TBZSide/check_mk/agents/check-mk-agent_1.4.0p38-1_all
 sudo gdebi -n check-mk-agent_1.4.0p38-1_all.deb Instaliert den herunter geladen Agent.
 
 Somit ist der Client bereit in CheckMK aufgenommen zu werden.
+______
+
+# Client in CheckMK aufnehmen
+Sobald  die Installation abgeschlossen ist kann man CheckMK per http://localhost:8080/TBZSide/check_mk/login.py öffnen.
+Danach meldet man sich mit cmkadmin und Admin1234 an.
+
