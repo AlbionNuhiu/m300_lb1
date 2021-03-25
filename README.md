@@ -90,11 +90,9 @@ Danach meldet man sich mit cmkadmin und Admin1234 an.
 ____
 ![Login](https://user-images.githubusercontent.com/80855358/112553404-be417780-8dc4-11eb-89ee-b22912cc174c.PNG)
 ____
-Danach geht man auf das Main-Dashboard.
+Danach geht man auf das Main-Dashboard. Hier geht man auf "ADD" und addet einen neuen Host den man kontrollieren kann.
 ___
 ![MainDashboard](https://user-images.githubusercontent.com/80855358/112553713-4d4e8f80-8dc5-11eb-98a4-af5ac538f9bc.PNG)
-___
-Hier geht man auf "ADD" und addet einen neuen Host den man kontrollieren kann.
 ___
 Bei ServicesOfHostClient, sieht man alle eingetragenen Hosts und Services.
 ___
