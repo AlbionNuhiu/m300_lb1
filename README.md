@@ -1,6 +1,6 @@
 # m300_lb CHECKMK Vagrant
 
-By Albion Nuhiu 
+By Albion Nuhiu ST18E
 
 # Einleitung
 Dies ist die Dokumenation für das Vagrant File für einen CheckMK Server samt einem CheckMK Test Client. Der CheckMK Server ist sobald das Vagrantfile durchgelaufen ist über http://localhost:8080/TBZSide/check_mk/login.py ereichbar. Mit den Default einstellungen von dem Vagrantfile wird dem Benutzer cmkadmin das Passwort Admin1234 gesetzt. Es werden zwei Boxen gestartet mit je 512MB Ram. Die beiden Boxen sind über ein Boxen internes Netzwerk verbunden. Der Server hat die IP 192.168.55.100 und der Client hat 192.168.55.101. Der Client ist vom Host aus nur via SSH ereichbar, sonst ist er hinter der NAT Firewall von VirtualBox geschützt. Der CheckMK Server ist nur via Port 8080 und dem SSH Port ereichbar.
@@ -105,5 +105,7 @@ Mit Vagrant Destroy, löscht man alles was dieses Vagrant-File zuvor kreiert hat
 ___
 ![Vagrant_Destroy](https://user-images.githubusercontent.com/80855358/112554056-e8e00000-8dc5-11eb-8159-14b245a9fc52.PNG)
 ___
-
-
+Wie der VirtualBox-Manager aussehen wird:
+___
+![VirtualBox](https://user-images.githubusercontent.com/80855358/112554310-5be97680-8dc6-11eb-81ba-70fd9772b68e.PNG)
+___
