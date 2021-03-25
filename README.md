@@ -22,3 +22,46 @@ Das Setup ist ganz einfach:
 Fertig!
 
 [Setup.txt](https://github.com/AlbionNuhiu/m300_lb/files/6208214/Setup.txt)
+
+# Vagrant File
+Hier beschreibe ich das VagrantFile näher.
+
+# VM Config 1
+[VMConfig1.txt](https://github.com/AlbionNuhiu/m300_lb/files/6208225/VMConfig1.txt)
+______
+In diesem Teil wird die ester VM definiert, in diesem Fall der Server. Die Box für diesen Service ist die ubuntu/xenial64 Box. Der Hostname wird auf Server gesetzt. Die VM bekommt zwei Adapter einen NAT und den anderen in einem intern Netzwerk. Der Nat-Netzwerkadapter leitet den Internen Port 80 auf den Port 8080 um, zusätzlich wird von Vagrant der SSH, dieser Port ist Dynamisch. Das interne Netzwerk ist für die komunikation zwischen Server und dem Client. Der Server hat die die interne IP 192.168.55.100. Der Vm wird 512 MB Ram zugewiesen, was für ein kleines Liunux reicht.
+
+# VM Befehl 1
+[VMBefehl1.txt](https://github.com/AlbionNuhiu/m300_lb/files/6208226/VMBefehl1.txt)
+______
+In diesem Teil sind die einzelnen Befehle die nach der Installation ausgeführt werden beschrieben:
+
+sudo apt-get update führt ein Update aus.
+
+sudo wget https://mathias-kettner.de/support/Check_MK-pubkey.gpg lädt den Public Key herunter.
+
+sudo wget https://mathias-kettner.de/support/1.4.0p38/check-mk-raw-1.4.0p38_0.xenial_amd64.deb lädt die CheckMK Instalationsdatei herunter von der Offiziellen Seite.
+
+sudo apt-key add Check_MK-pubkey.gpg fügt den Public Key hinzu damit dan es auch installiert werden kann.
+
+sudo apt-get -y install gdebi-core installiert gdebi welches für die Instalation benötigt wird.
+
+sudo gdebi -n check-mk-raw-1.4.0p38_0.xenial_amd64.deb instaliert mit gdebi CheckMK, der Parameter -n instaliert es ohne nachzufragen.
+
+sudo omd create TBZSide mit diesem Befehl wird in CheckMK eine neue Seite erstellt, für hier wird sie TBZSide genannt.
+
+sudo omd start TBZSide mit disem Befehl wird die vorhin erstellte seite gestartet.
+
+wget http://192.168.55.100/TBZSide/check_mk/agents/check-mk-agent_1.4.0p38-1_all.deb Mit diesem Befehl wird der CheckMK Agent auf dem Server heruntergeladen.
+
+sudo gdebi -n check-mk-agent_1.4.0p38-1_all.deb Instaliert den heruntergeladen Agent.
+
+cd /omd/sites/TBZSide/etc Wechseln in das Web Root Verzeichnis der Webseite.
+
+sudo rm htpasswd Löschen der alten htpasswd Datei.
+
+sudo su in den Root User wechseln.
+
+htpasswd -nb cmkadmin Admin1234 > htpasswd Neue htpasswd erstellen mit dem User cmkadmin und dem Passwort Admin1234.
+
+exit Beenden der Konsole.
